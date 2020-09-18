@@ -1,5 +1,5 @@
 # Spanish support for Schemy
-Ever needed for a spanish json validator to plug quickly into your project? This is a plugin for [Schemy](https://github.com/Schemy-JS/schemy)
+Ever needed for a spanish json validator to plug quickly into your project? This is a plugin for [Schemy](https://github.com/aeberdinelli/schemy)
 
 ## Usage
 Install it using npm: `npm install --save schemy-translations-spanish`, then extend Schemy with it:
