@@ -20,6 +20,11 @@
     "language",
     "plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Schemy-JS/schemy-translations-spanish.git"
+  },
+  "homepage": "https://github.com/Schemy-JS/schemy-translations-spanish",
   "author": "Alan Berdinelli",
-  "license": "ISC"
+  "license": "MIT"
 }
