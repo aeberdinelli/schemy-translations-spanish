@@ -2,12 +2,20 @@
 function translateError(message) {
 	return message
 		.replace(
+			/^Data passed to validate is incorrect. It must be an object$/ig,
+			'Los datos a validar son incorrectos. Se esperaba un objeto.'
+		)
+		.replace(
 			/^Property ([a-z0-9_.]+) is (number|string|boolean|object|function), expected (number|string|boolean|object)$/ig,
 			'La propiedad $1 es de tipo $2, se esperaba $3'
 		)
 		.replace(
 			/^Property ([a-z0-9_.]+) not valid in schema$/ig,
 			'La propiedad $1 no está permitida en el esquema'
+		)
+		.replace(
+			/^Custom validation failed for property ([a-z0-9_.]+)`$/ig,
+			'Falló la validación para $1'
 		)
 		.replace(
 			/^Missing required property ([a-z0-9_.]+)/ig,
@@ -38,7 +46,7 @@ function translateError(message) {
 			'Fallo la validacion para la propiedad $1'
 		)
 		.replace(
-			/^Value for property ([a-z0-9_.]+) not in acceptable values$/ig,
+			/^Value of property ([a-z0-9_.]+) does not contain an acceptable value$/ig,
 			'El valor para la propiedad $1 no está entre los valores aceptados'
 		)
 		.replace(
@@ -56,6 +64,14 @@ function translateError(message) {
 		.replace(
 			/^An item in array of property ([a-z0-9_.]+) is not valid. All items must be of type (number|string|boolean|object|function)}$/ig,
 			'Un elemento en la propiedad $1 no es válido. Todos los elementos deben ser de tipo $2'
+		)
+		.replace(
+			/^Property ([a-z0-9_.]+) must contain at least ([0-9]+) elements$/ig,
+			'La propiedad $1 debe contener por lo menos $2 elementos'
+		)
+		.replace(
+			/^Property ([a-z0-9_.]+) must contain no more than ([0-9]+) elements$/ig,
+			'La propiedad $1 debe contener no más de $2 elementos'
 		)
 		.replace(
 			/^Cannot validate empty object$/ig,
